@@ -5,6 +5,7 @@ body {
   background-color: #f9f9f9;
   color: #222;
   line-height: 1.6;
+  background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="%23f9f9f9"/><circle cx="20" cy="20" r="1.5" fill="%23fbc02d" fill-opacity="0.08"/></svg>');
 }
 
 /* Navbar */
@@ -17,13 +18,22 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  border-radius: 0 0 18px 18px;
 }
 
 .logo {
   font-family: 'Baloo Bhaina 2', cursive;
   font-size: 1.5rem;
   color: #fbc02d;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(251,192,45,0.12);
 }
 
 .nav-links a {
@@ -31,11 +41,15 @@ body {
   color: #333;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s;
+  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
 }
 
 .nav-links a:hover {
   color: #f44336;
+  background: #fffde7;
+  text-shadow: 0 2px 8px #fbc02d33;
 }
 
 /* Hero Slider */
@@ -65,17 +79,19 @@ body {
 }
 
 .overlay {
-  background-color: rgba(255,255,255,0.85);
-  padding: 2rem;
+  background: linear-gradient(120deg, #fffbe7 60%, #ffe082 100%);
+  padding: 2rem 3rem;
   text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  animation: fadeInUp 1s cubic-bezier(.4,2,.3,1);
 }
 
 .overlay h1 {
   font-family: 'Baloo Bhaina 2', cursive;
   color: #fbc02d;
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .overlay p {
@@ -85,19 +101,31 @@ body {
 
 .cta-button {
   margin-top: 1rem;
-  background: #4caf50;
+  background: linear-gradient(90deg, #4caf50 0%, #8bc34a 100%);
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 25px;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: background 0.3s, transform 0.2s;
   display: inline-block;
+  box-shadow: 0 2px 8px rgba(76,175,80,0.10);
 }
 
 .cta-button:hover {
-  background: #388e3c;
+  background: linear-gradient(90deg, #388e3c 0%, #689f38 100%);
+  transform: scale(1.06);
+}
+
+/* Wavy Divider */
+.wavy-divider {
+  width: 100%;
+  height: 48px;
+  background: url('data:image/svg+xml;utf8,<svg width="100%" height="48" viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 24C120 48 360 48 720 24C1080 0 1320 0 1440 24V48H0V24Z" fill="%23ffe082"/></svg>') repeat-x;
+  background-size: cover;
+  margin: 0;
+  border: none;
 }
 
 /* Warehouse Section */
@@ -123,14 +151,15 @@ body {
 
 .warehouse-card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   height: 100%;
   border: 1px solid #eee;
+  animation: fadeInUp 0.7s cubic-bezier(.4,2,.3,1);
 }
 
 .warehouse-card img {
@@ -138,6 +167,13 @@ body {
   height: 200px;
   object-fit: cover;
   display: block;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 2px 12px rgba(251,192,45,0.08);
+  transition: transform 0.4s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+}
+.warehouse-card img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 32px rgba(251,192,45,0.16);
 }
 .warehouse-card.hidden {
   display: none;
@@ -152,8 +188,8 @@ body {
 }
 
 .warehouse-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  transform: scale(1.04);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 
 .card-content h3 {
@@ -164,11 +200,13 @@ body {
 .tag {
   display: inline-block;
   padding: 0.3rem 0.6rem;
-  border-radius: 5px;
-  font-size: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
   margin-top: 0.5rem;
   background-color: #4caf50;
   color: #fff;
+  box-shadow: 0 1px 4px rgba(76,175,80,0.10);
+  letter-spacing: 0.5px;
 }
 
 .tag.cold {
@@ -184,16 +222,21 @@ body {
 .details-btn {
   display: block;
   margin-top: 1rem;
-  background-color: #f44336;
+  background: linear-gradient(90deg, #fbc02d 0%, #ffe082 100%);
   color: #fff;
   text-align: center;
   padding: 0.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(251,192,45,0.10);
+  transition: background 0.3s, transform 0.2s;
 }
 
 .details-btn:hover {
-  background-color: #d32f2f;
+  background: linear-gradient(90deg, #ffb300 0%, #ffd54f 100%);
+  color: #fff;
+  transform: scale(1.05);
 }
 
 /* Contact & About */
@@ -201,6 +244,8 @@ body {
   padding: 2rem;
   background-color: #fff;
   color: #222;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
 .contact-section h2 {
@@ -217,6 +262,8 @@ body {
 .about-section {
   padding: 2rem;
   background-color: #f9f9f9;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
 .about-section h2 {
@@ -237,21 +284,26 @@ body {
   background-size: cover;
   background-blend-mode: lighten;
   background-color: #fffbe7;
+  border-radius: 12px;
 }
 
 /* Footer */
 .footer {
-  background: #f5f5f5;
+  background: linear-gradient(90deg, #fffde7 0%, #ffe082 100%);
   color: #888;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+  padding: 2rem 1rem 1rem 1rem;
+  font-size: 1rem;
   border-top: 1px solid #eee;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -2px 12px rgba(251,192,45,0.06);
+  position: relative;
 }
 
 .footer .motif {
   margin-top: 0.5rem;
   color: #8bc34a;
+  font-size: 1.3rem;
 }
 
 /* Filter Bar */
@@ -265,19 +317,33 @@ body {
 }
 
 .filter-bar select {
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.5rem 0.6rem 2.5rem;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 999px;
   border: 1px solid #ddd;
   outline: none;
   background-color: #fff;
   color: #222;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  background-repeat: no-repeat;
+  background-position: 0.8rem center;
+}
+
+#stateSelect {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23fbc02d" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+}
+#districtSelect {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%238bc34a" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+}
+#typeSelect {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%2303a9f4" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
 }
 
 .filter-bar select:hover {
   background-color: #f5f5f5;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(251,192,45,0.08);
 }
 
 /* Unified Button Style */
@@ -285,30 +351,37 @@ body {
 .clear-btn {
   padding: 0.6rem 1.5rem;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 999px;
   border: none;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s, transform 0.2s;
   cursor: pointer;
   color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 /* Show Button - Yellow Theme */
 .filter-btn {
-  background-color: #fbc02d;
+  background: linear-gradient(90deg, #fbc02d 0%, #ffe082 100%);
 }
 
 .filter-btn:hover {
-  background-color: #ffb300;
+  background: linear-gradient(90deg, #ffb300 0%, #ffd54f 100%);
   transform: scale(1.05);
 }
 
 /* Clear Button - Red Theme */
 .clear-btn {
-  background-color: #e53935;
+  background: linear-gradient(90deg, #e53935 0%, #ff7043 100%);
 }
 
 .clear-btn:hover {
-  background-color: #c62828;
+  background: linear-gradient(90deg, #c62828 0%, #ff8a65 100%);
   transform: scale(1.05);
+}
+
+/* Card Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
 }
