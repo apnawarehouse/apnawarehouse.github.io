@@ -25,7 +25,7 @@ body {
 .logo {
   font-family: 'Baloo Bhaina 2', cursive;
   font-size: 1.5rem;
-  color: #fbc02d;
+  color: #183153;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -89,7 +89,7 @@ body {
 
 .overlay h1 {
   font-family: 'Baloo Bhaina 2', cursive;
-  color: #fbc02d;
+  color: #183153;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
@@ -156,7 +156,7 @@ body {
 .section-title {
   text-align: center;
   font-size: 2rem;
-  color: #fbc02d;
+  color: #183153;
   font-family: 'Baloo Bhaina 2', cursive;
   margin-bottom: 1.5rem;
 }
@@ -212,7 +212,7 @@ body {
 }
 
 .card-content h3 {
-  color: #fbc02d;
+  color: #183153;
   margin: 0.5rem 0;
 }
 
@@ -268,7 +268,7 @@ body {
 }
 
 .contact-section h2 {
-  color: #fbc02d;
+  color: #183153;
   font-family: 'Baloo Bhaina 2', cursive;
 }
 
@@ -288,7 +288,7 @@ body {
 .about-section h2 {
   font-family: 'Baloo Bhaina 2', cursive;
   font-size: 2rem;
-  color: #fbc02d;
+  color: #183153;
 }
 
 /* Madhubani Border */
@@ -308,20 +308,20 @@ body {
 
 /* Footer */
 .footer {
-  background: linear-gradient(90deg, #fffde7 0%, #ffe082 100%);
-  color: #888;
+  background: linear-gradient(90deg, #e3f2fd 0%, #b3e5fc 100%);
+  color: #183153;
   text-align: center;
   padding: 2rem 1rem 1rem 1rem;
   font-size: 1rem;
   border-top: 1px solid #eee;
   border-radius: 24px 24px 0 0;
-  box-shadow: 0 -2px 12px rgba(251,192,45,0.06);
+  box-shadow: 0 -2px 12px rgba(100,181,246,0.06);
   position: relative;
 }
 
 .footer .motif {
   margin-top: 0.5rem;
-  color: #8bc34a;
+  color: #4fc3f7;
   font-size: 1.3rem;
 }
 
