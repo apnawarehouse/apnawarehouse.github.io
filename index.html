@@ -11,6 +11,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script defer src="js/scripts.js"></script>
 </head>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/687b4734487057192063af9c/1j0gos9u2';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 <body>
   <header class="navbar">
     <!--<div class="logo">📦 अपना WareHouse</div>-->
@@ -27,14 +40,14 @@
 
   <section class="hero-slider">
     <div class="slide fade active" style="background-image: url('images/warehouse1.jpeg');">
-      <div class="overlay">
+      <div class="overlay fade-in-scroll">
         <h1>Empowering Rural Warehousing</h1>
         <p>किसान के साथ, भविष्य के लिए</p>
         <a href="warehouses.html" class="cta-button">View Warehouses</a>
       </div>
     </div>
     <div class="slide fade" style="background-image: url('images/warehouse2.jpeg');">
-      <div class="overlay">
+      <div class="overlay fade-in-scroll">
         <h1>Safe Storage for Every Crop</h1>
         <p>गांव से शहर तक, हर किसान के साथ</p>
         <a href="warehouses.html" class="cta-button">Check Availability</a>
@@ -42,9 +55,29 @@
     </div>
   </section>
 
+  <div class="wavy-divider"></div>
+
   <footer class="footer">
     <p>&copy; 2025 अपना WareHouse | Made with ❤️ for Farmers</p>
     <div class="motif">🌾 🌻 🌾</div>
   </footer>
+
+  <button class="fab" onclick="window.location.href='contact-warehouse1.html'" title="Contact Us">✉️</button>
+
+  <script>
+    // Scroll-based fade-in for .fade-in-scroll, .about-section, .contact-section
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.fade-in-scroll, .about-section, .contact-section');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 60) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
 </body>
 </html>  

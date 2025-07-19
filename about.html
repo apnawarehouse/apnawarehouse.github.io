@@ -7,6 +7,19 @@
   <title>About Us | अपना WareHouse</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/687b4734487057192063af9c/1j0gos9u2';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 <body>
   <header class="navbar">
     <!--<div class="logo">📦 अपना WareHouse</div>-->
@@ -21,7 +34,7 @@
     </nav>
   </header>
 
-  <main class="about-section">
+  <main class="about-section fade-in-scroll">
     <h2>हमार मिशन</h2>
     <p>हम बिहार के किसानों के लिए भंडारण सुविधा को सरल, सुलभ और सस्ता बनाना चाहते हैं। हम लोकल भाषाओं, देसी डिज़ाइन और स्थानीय परंपराओं को अपना कर तकनीक को गांव-गांव तक पहुंचा रहे हैं।</p>
     <div class="madhubani-border">
@@ -30,8 +43,28 @@
     <p>From Madhubani to Gaya, we are building a network of accessible and trusted warehouses.</p>
   </main>
 
+  <div class="wavy-divider"></div>
+
   <footer class="footer">
     <p>&copy; 2025 अपना WareHouse | Bharat ke Kisan, Bharat ka Bhavishya</p>
   </footer>
+
+  <button class="fab" onclick="window.location.href='contact-warehouse1.html'" title="Contact Us">✉️</button>
+
+  <script>
+    // Scroll-based fade-in for .fade-in-scroll, .about-section, .contact-section
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.fade-in-scroll, .about-section, .contact-section');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 60) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
 </body>
 </html>
