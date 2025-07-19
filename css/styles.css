@@ -1,5 +1,4 @@
-/* css/styles.css */
-
+/* Base Styles */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -8,6 +7,7 @@ body {
   line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
   background: #1c1c1c;
   padding: 1rem 2rem;
@@ -37,6 +37,7 @@ body {
   color: #f44336;
 }
 
+/* Hero Slider */
 .hero-slider {
   position: relative;
   height: 100vh;
@@ -96,6 +97,7 @@ body {
   background: #388e3c;
 }
 
+/* Warehouse Section */
 .warehouse-grid {
   padding: 2rem;
   background-color: #1c1c1c;
@@ -109,11 +111,14 @@ body {
   margin-bottom: 1.5rem;
 }
 
+
 .card-grid {
-  display: grid;
+  display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
+  justify-items: center;
 }
+
 
 .warehouse-card {
   background: #222;
@@ -121,20 +126,31 @@ body {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   transition: transform 0.3s ease;
-}
-
-.warehouse-card:hover {
-  transform: scale(1.03);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .warehouse-card img {
   width: 100%;
-  height: 70%;
+  height: 200px;
   object-fit: cover;
+  display: block;
+}
+.warehouse-card.hidden {
+  display: none;
 }
 
 .card-content {
   padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.warehouse-card:hover {
+  transform: scale(1.03);
 }
 
 .card-content h3 {
@@ -154,10 +170,12 @@ body {
 
 .tag.cold {
   background-color: #03a9f4;
+  text-align: center;
 }
 
 .tag.agro {
   background-color: #8bc34a;
+  text-align: center;
 }
 
 .details-btn {
@@ -175,6 +193,7 @@ body {
   background-color: #d32f2f;
 }
 
+/* Contact & About */
 .contact-section {
   padding: 2rem;
   background-color: #1a1a1a;
@@ -203,6 +222,7 @@ body {
   color: #fdd835;
 }
 
+/* Madhubani Border */
 .madhubani-border {
   border: 4px dashed #ff7043;
   padding: 1rem;
@@ -215,6 +235,7 @@ body {
   background-blend-mode: overlay;
 }
 
+/* Footer */
 .footer {
   background: #000;
   color: #aaa;
@@ -228,24 +249,61 @@ body {
   color: #c5e1a5;
 }
 
-/* js/scripts.js */
-
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    if (i === index) slide.classList.add('active');
-  });
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
+.filter-bar select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.3s ease;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  showSlide(currentSlide);
-  setInterval(nextSlide, 5000);
-});
+.filter-bar select:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+/* Unified Button Style */
+.filter-btn,
+.clear-btn {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Show Button - Yellow Theme */
+.filter-btn {
+  background-color: #fbc02d;
+}
+
+.filter-btn:hover {
+  background-color: #ffb300;
+  transform: scale(1.05);
+}
+
+/* Clear Button - Red Theme */
+.clear-btn {
+  background-color: #e53935;
+}
+
+.clear-btn:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+}
