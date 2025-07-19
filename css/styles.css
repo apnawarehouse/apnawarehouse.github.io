@@ -2,14 +2,14 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #111;
-  color: #eee;
+  background-color: #f9f9f9;
+  color: #222;
   line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
-  background: #1c1c1c;
+  background: #fff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -17,17 +17,18 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .logo {
   font-family: 'Baloo Bhaina 2', cursive;
   font-size: 1.5rem;
-  color: #fdd835;
+  color: #fbc02d;
 }
 
 .nav-links a {
   margin-left: 1rem;
-  color: #fff;
+  color: #333;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -42,6 +43,7 @@ body {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background: #f5f5f5;
 }
 
 .slide {
@@ -63,21 +65,22 @@ body {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255,255,255,0.85);
   padding: 2rem;
   text-align: center;
   border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
 }
 
 .overlay h1 {
   font-family: 'Baloo Bhaina 2', cursive;
-  color: #fff176;
+  color: #fbc02d;
   font-size: 2.5rem;
 }
 
 .overlay p {
   font-size: 1.2rem;
-  color: #fff;
+  color: #333;
 }
 
 .cta-button {
@@ -100,7 +103,7 @@ body {
 /* Warehouse Section */
 .warehouse-grid {
   padding: 2rem;
-  background-color: #1c1c1c;
+  background-color: #f5f5f5;
 }
 
 .section-title {
@@ -111,7 +114,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-
 .card-grid {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -119,16 +121,16 @@ body {
   justify-items: center;
 }
 
-
 .warehouse-card {
-  background: #222;
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
+  border: 1px solid #eee;
 }
 
 .warehouse-card img {
@@ -151,10 +153,11 @@ body {
 
 .warehouse-card:hover {
   transform: scale(1.03);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
 }
 
 .card-content h3 {
-  color: #ffc107;
+  color: #fbc02d;
   margin: 0.5rem 0;
 }
 
@@ -196,30 +199,30 @@ body {
 /* Contact & About */
 .contact-section {
   padding: 2rem;
-  background-color: #1a1a1a;
-  color: #eee;
+  background-color: #fff;
+  color: #222;
 }
 
 .contact-section h2 {
-  color: #ffca28;
+  color: #fbc02d;
   font-family: 'Baloo Bhaina 2', cursive;
 }
 
 .contact-msg {
   margin-top: 1rem;
   font-style: italic;
-  color: #90caf9;
+  color: #1976d2;
 }
 
 .about-section {
   padding: 2rem;
-  background-color: #121212;
+  background-color: #f9f9f9;
 }
 
 .about-section h2 {
   font-family: 'Baloo Bhaina 2', cursive;
   font-size: 2rem;
-  color: #fdd835;
+  color: #fbc02d;
 }
 
 /* Madhubani Border */
@@ -228,25 +231,27 @@ body {
   padding: 1rem;
   margin: 1rem 0;
   font-style: italic;
-  color: #ffe082;
+  color: #ff7043;
   text-align: center;
   background-image: url('../assets/icons/madhubani-border.png');
   background-size: cover;
-  background-blend-mode: overlay;
+  background-blend-mode: lighten;
+  background-color: #fffbe7;
 }
 
 /* Footer */
 .footer {
-  background: #000;
-  color: #aaa;
+  background: #f5f5f5;
+  color: #888;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+  border-top: 1px solid #eee;
 }
 
 .footer .motif {
   margin-top: 0.5rem;
-  color: #c5e1a5;
+  color: #8bc34a;
 }
 
 /* Filter Bar */
@@ -263,15 +268,15 @@ body {
   padding: 0.6rem 1rem;
   font-size: 1rem;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #ddd;
   outline: none;
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #222;
   transition: background-color 0.3s ease;
 }
 
 .filter-bar select:hover {
-  background-color: #444;
+  background-color: #f5f5f5;
   cursor: pointer;
 }
 
