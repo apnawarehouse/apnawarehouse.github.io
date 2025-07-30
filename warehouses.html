@@ -1,4 +1,3 @@
-<!-- warehouses.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +19,8 @@
   s1.setAttribute('crossorigin','*');
   s0.parentNode.insertBefore(s1,s0);
   })();
-  </script>
-  <!--End of Tawk.to Script-->
+</script>
+<!--End of Tawk.to Script-->
 <body>
   <header class="navbar">
     <div class="logo">
@@ -38,44 +37,39 @@
   <main class="warehouse-grid">
     <h2 class="section-title">Available Warehouses</h2>
     <div class="filter-bar">
-  <select id="stateSelect">
-    <option value="">Select State</option>
-    <option value="bihar">Bihar</option>
-  </select>
+      <select id="stateSelect">
+        <option value="">Select State</option>
+        <option value="bihar">Bihar</option>
+      </select>
 
-  <select id="districtSelect">
-    <option value="">Select District</option>
-    <option value="patna">Patna</option>
-    <option value="gaya">Gaya</option>
-    <option value="muzaffarpur">Muzaffarpur</option>
-    <option value="bhagalpur">Bhagalpur</option>
-    <option value="darbhanga">Darbhanga</option>
-    <option value="purnia">Purnia</option>
-    <option value="arrah">Arrah</option>
-    <option value="nalanda">Nalanda</option>
-    <option value="samastipur">Samastipur</option>
-    <option value="begusarai">Begusarai</option>
-  </select>
+      <select id="districtSelect" onchange="updateAreaDropdown()">
+        <option value="">Select District</option>
+        <option value="patna">Patna</option>
+        <option value="gaya">Gaya</option>
+        <option value="muzaffarpur">Muzaffarpur</option>
+        <option value="bhagalpur">Bhagalpur</option>
+        <option value="darbhanga">Darbhanga</option>
+        <option value="purnia">Purnia</option>
+        <option value="arrah">Arrah</option>
+        <option value="nalanda">Nalanda</option>
+        <option value="samastipur">Samastipur</option>
+        <option value="begusarai">Begusarai</option>
+      </select>
 
-  <select id="typeSelect">
-    <option value="">Select Type</option>
-    <option value="cold">Cold Storage</option>
-    <option value="agro">Agro Based</option>
-  </select>
+      <select id="areaSelect">
+        <option value="">Select Area</option>
+      </select>
 
-  <button class="filter-btn" onclick="filterCards()">Show</button>
-  <button class="clear-btn" onclick="clearFilters()">Clear filters</button>
-</div>
-
-
-
+      <button class="filter-btn" onclick="filterCards()">Show</button>
+      <button class="clear-btn" onclick="clearFilters()">Clear filters</button>
+    </div>
 
     <div class="card-grid">
       <div class="warehouse-card">
         <img src="images/warehouse1.jpeg" alt="Warehouse in Patna">
         <div class="card-content">
           <h3>Patna Cold Storage</h3>
-          <p>📍 Patna, Bihar</p>
+          <p>📍 Kankarbagh, Patna, Bihar</p>
           <p>Capacity: 1000 Tons</p>
           <span class="tag cold">Cold Storage</span>
           <a href="contact-warehouse1.html" class="details-btn">View Details</a>
@@ -86,7 +80,7 @@
         <img src="images/warehouse2.jpeg" alt="Warehouse in Gaya">
         <div class="card-content">
           <h3>Gaya Agro Hub</h3>
-          <p>📍 Gaya, Bihar</p>
+          <p>📍 Bodh Gaya, Gaya, Bihar</p>
           <p>Capacity: 800 Tons</p>
           <span class="tag agro">Agro Based</span>
           <a href="contact-warehouse2.html" class="details-btn">View Details</a>
@@ -97,7 +91,7 @@
         <img src="images/warehouse3.jpeg" alt="Warehouse in Muzaffarpur">
         <div class="card-content">
           <h3>Muzaffarpur Mega Store</h3>
-          <p>📍 Muzaffarpur, Bihar</p>
+          <p>📍 Mithanpura, Muzaffarpur, Bihar</p>
           <p>Capacity: 1200 Tons</p>
           <span class="tag cold">Cold Storage</span>
           <a href="contact-warehouse3.html" class="details-btn">View Details</a>
@@ -108,7 +102,7 @@
         <img src="images/warehouse4.jpg" alt="Warehouse in Bhagalpur">
         <div class="card-content">
           <h3>Bhagalpur Agro Depot</h3>
-          <p>📍 Bhagalpur, Bihar</p>
+          <p>📍 Nathnagar, Bhagalpur, Bihar</p>
           <p>Capacity: 950 Tons</p>
           <span class="tag agro">Agro Based</span>
           <a href="contact-warehouse4.html" class="details-btn">View Details</a>
@@ -119,7 +113,7 @@
         <img src="images/warehouse5.jpg" alt="Warehouse in Darbhanga">
         <div class="card-content">
           <h3>Darbhanga Fresh Storage</h3>
-          <p>📍 Darbhanga, Bihar</p>
+          <p>📍 Laheriasarai, Darbhanga, Bihar</p>
           <p>Capacity: 1100 Tons</p>
           <span class="tag cold">Cold Storage</span>
           <a href="contact-warehouse5.html" class="details-btn">View Details</a>
@@ -130,7 +124,7 @@
         <img src="images/warehouse6.jpg" alt="Warehouse in Purnia">
         <div class="card-content">
           <h3>Purnia Green Agri Hub</h3>
-          <p>📍 Purnia, Bihar</p>
+          <p>📍 Gulabbagh, Purnia, Bihar</p>
           <p>Capacity: 700 Tons</p>
           <span class="tag agro">Agro Based</span>
           <a href="contact-warehouse6.html" class="details-btn">View Details</a>
@@ -141,7 +135,7 @@
         <img src="images/warehouse7.jpg" alt="Warehouse in Arrah">
         <div class="card-content">
           <h3>Arrah Freeze Point</h3>
-          <p>📍 Arrah, Bihar</p>
+          <p>📍 Jagdeo Nagar, Arrah, Bihar</p>
           <p>Capacity: 850 Tons</p>
           <span class="tag cold">Cold Storage</span>
           <a href="contact-warehouse7.html" class="details-btn">View Details</a>
@@ -152,7 +146,7 @@
         <img src="images/warehouse8.jpg" alt="Warehouse in Nalanda">
         <div class="card-content">
           <h3>Nalanda Harvest Hub</h3>
-          <p>📍 Nalanda, Bihar</p>
+          <p>📍 Bihar Sharif, Nalanda, Bihar</p>
           <p>Capacity: 650 Tons</p>
           <span class="tag agro">Agro Based</span>
           <a href="contact-warehouse8.html" class="details-btn">View Details</a>
@@ -163,7 +157,7 @@
         <img src="images/warehouse9.jpg" alt="Warehouse in Samastipur">
         <div class="card-content">
           <h3>Samastipur Chill Zone</h3>
-          <p>📍 Samastipur, Bihar</p>
+          <p>📍 Mohanpur, Samastipur, Bihar</p>
           <p>Capacity: 780 Tons</p>
           <span class="tag cold">Cold Storage</span>
           <a href="contact-warehouse9.html" class="details-btn">View Details</a>
@@ -174,7 +168,7 @@
         <img src="images/warehouse10.jpg" alt="Warehouse in Begusarai">
         <div class="card-content">
           <h3>Begusarai Krishi Sthal</h3>
-          <p>📍 Begusarai, Bihar</p>
+          <p>📍 Barauni, Begusarai, Bihar</p>
           <p>Capacity: 900 Tons</p>
           <span class="tag agro">Agro Based</span>
           <a href="contact-warehouse10.html" class="details-btn">View Details</a>
@@ -188,10 +182,39 @@
   </footer>
 
   <script>
+    // District to area mapping (replace with actual data from your backend)
+    const districtAreas = {
+      'patna': ['Kankarbagh', 'Danapur', 'Phulwari Sharif'],
+      'gaya': ['Bodh Gaya', 'Manpur', 'Wazirganj'],
+      'muzaffarpur': ['Mithanpura', 'Kanti', 'Bochaha'],
+      'bhagalpur': ['Nathnagar', 'Kahalgaon', 'Sultanganj'],
+      'darbhanga': ['Laheriasarai', 'Benipur', 'Biraul'],
+      'purnia': ['Gulabbagh', 'Dhamdaha', 'Banmankhi'],
+      'arrah': ['Jagdeo Nagar', 'Koelwar', 'Sandesh'],
+      'nalanda': ['Bihar Sharif', 'Rajgir', 'Harnaut'],
+      'samastipur': ['Mohanpur', 'Rosera', 'Dalsinghsarai'],
+      'begusarai': ['Barauni', 'Teghra', 'Bachhwara']
+    };
+
+    function updateAreaDropdown() {
+      const district = document.getElementById("districtSelect").value.toLowerCase();
+      const areaSelect = document.getElementById("areaSelect");
+      areaSelect.innerHTML = '<option value="">Select Area</option>'; // Reset options
+
+      if (district && districtAreas[district]) {
+        districtAreas[district].forEach(area => {
+          const option = document.createElement("option");
+          option.value = area.toLowerCase();
+          option.textContent = area;
+          areaSelect.appendChild(option);
+        });
+      }
+    }
+
     function filterCards() {
       const state = document.getElementById("stateSelect").value.toLowerCase();
       const district = document.getElementById("districtSelect").value.toLowerCase();
-      const type = document.getElementById("typeSelect").value.toLowerCase();
+      const area = document.getElementById("areaSelect").value.toLowerCase();
 
       const cards = document.querySelectorAll(".warehouse-card");
 
@@ -199,9 +222,9 @@
         const text = card.textContent.toLowerCase();
         const matchesState = !state || text.includes(state);
         const matchesDistrict = !district || text.includes(district);
-        const matchesType = !type || text.includes(type);
+        const matchesArea = !area || text.includes(area);
 
-        if (matchesState && matchesDistrict && matchesType) {
+        if (matchesState && matchesDistrict && matchesArea) {
           card.classList.remove("hidden");  // Show
         } else {
           card.classList.add("hidden");     // Hide
@@ -212,7 +235,7 @@
     function clearFilters() {
       document.getElementById("stateSelect").selectedIndex = 0;
       document.getElementById("districtSelect").selectedIndex = 0;
-      document.getElementById("typeSelect").selectedIndex = 0;
+      document.getElementById("areaSelect").innerHTML = '<option value="">Select Area</option>';
 
       const cards = document.querySelectorAll(".warehouse-card");
       cards.forEach(card => {
@@ -234,7 +257,5 @@
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('DOMContentLoaded', revealOnScroll);
   </script>
-
-
 </body>
 </html>
