@@ -628,3 +628,9 @@ body {
   from { opacity: 0; transform: translateY(30px);}
   to { opacity: 1; transform: translateY(0);}
 }
+.logo-img {
+  border-radius: 0; /* Rectangle shape */
+  object-fit: cover;
+  width: 80px;
+  height: 80px;
+}
